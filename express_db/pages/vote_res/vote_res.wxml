@@ -1,0 +1,13 @@
+<form bindsubmit="evaSubmit" report-submit>
+   <view class="weui__title" name="title">标题：{{voteTitle}}</view>
+    <view class="weui__text" name="text">内容：{{voteText}}</view>
+   <view class="weui__date" name="date">时间：{{voteDate}}</view>
+      <view class="weui__type" name="type">时间：{{voteType}}</view>
+   <block  wx:for="{{optionList}}" wx:for-index="idx" wx:for-item="item" >
+   <view class="option" name="option">{{item.value}}:{{item.num}} 票</view>
+        </block>
+        <button  formType="submit" disabled="{{subdisabled}}" class="post-submit" hover-class="button-hover" size="default" type="default" style="color:#fff;background-color:rgba(23,181,238,1)">
+           提交
+        </button>
+    
+  </form>

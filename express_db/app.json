@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/advertise/advertise",
+    "pages/register/register",
+    "pages/announcement/announcement",
+    "pages/message/message",
+    "pages/manage/manage",
+    "pages/changemessage/changemessage",
+    "pages/comment/comment",
+    "pages/vote/vote",
+    "pages/vote_detail/vote_detail",
+    "pages/vote_index/vote_index",
+    "pages/user/user",
+    "pages/vote_res/vote_res"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+ 
+}

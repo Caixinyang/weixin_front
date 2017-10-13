@@ -1,0 +1,56 @@
+<!--pages/comment/comment.wxml-->
+<scroll-view class="art-content1" scroll-y="true" scroll-x="false" 
+  bindscrolltolower="moreArticle" data-page-index="{{pageIndex}}" style="height: 900px;width:100%;">
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" wx:key="Id">
+      <view class="border-slice">
+        <!-- 贴主信息-->
+        <view>
+            <view style="padding:30rpx 24rpx 16rpx; float:left">
+              <image style="width:40px;height:40px;overflow:hidden;" src="../../images/comment_user.jpg"></image>
+            </view>
+            <view style="padding:30rpx 0px 0px; overflow:hidden; height:110rpx;">
+              <view class="aricle-user-wrap">
+                <text class="index-poster-name">V.{{item.author}}</text>
+                <text class="index-poster-kind">9级</text>
+                <view class="index-poster-arrow" catchtap="openArrow" data-user-id="{{item.User.Id}}"></view>
+              </view>
+              <view style="height:40rpx">
+                <text class="index-post-info">{{item.submit_time}}</text>
+               
+              </view>
+            </view>
+        </view>
+        <view style="clear:both"></view>
+        <!-- 帖子正文 -->
+        <view>
+          <view class="article-content-container">
+            <view>
+                <a class="section-theme" bindtap="toBankuai">琴海湾</a>
+                <text class="article-content">{{item.text}}</text>
+            </view>
+      
+          </view>
+          <!-- 转评赞 -->
+          <view>
+            <!-- 转发
+            <view class="fr res"><view class="icon-zan {{item.IsPraise == 0?'':'zaned'}}"></view><em style="color:{{item.IsPraise == 0?'':'#5a85ce'}}" class="em">赞</em> </view>
+            -->
+            <view style="clear:both"></view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+   <!-- 评论 -->
+<view>
+<form bindsubmit="formSubmit">
+    <view class="post-mainbody-wrap" >
+        <textarea class="c-fullwidth post-mainbody"  name="text" placeholder="内容..." value="{{text}}" type="textarea" bindblur=" textBlur"/>
+    </view>
+    <view class="post-submit-container" >
+        <button  formType="submit" disabled="{{subdisabled}}" class="post-submit" hover-class="button-hover" size="default" type="default" style="color:#fff;background-color:rgba(23,181,238,1)">
+           评论
+        </button>
+    </view>
+  </form>
+</view>

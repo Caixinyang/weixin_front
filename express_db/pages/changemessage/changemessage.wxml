@@ -1,0 +1,28 @@
+<!--<view class="container-swi">
+	<view class="container-body-swi"> -->
+		<view class="tab">
+    <!--为审核、已通过、黑名单-->
+			<view class="tab-nav">
+				<text wx:for="{{tabnav.tabitem}}" bindtap="setTab" class="{{showtab==index?'active':''}}" data-tabindex="{{index}}" data-type="{{item.type}}" wx:key="{{item.type}}">{{item.text}}</text>
+				<view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+			</view>
+      <!--style单击发生事件-->
+			<view class="tab-content" style="" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="width: {{tabnav.tabnum*100}}%;transform:translateX(-{{showtab*100/tabnav.tabnum}}%);margin-left: {{marginleft}}px;">
+				
+        <view class="tab-panel">
+					<scroll-view class="test-list">
+          <checkbox-group  bindchange="checkboxChange">
+						<view class="test-item" wx:for="{{exam}}" wx:key="{{item.id}}">
+							<view class="test-item-t">日期：{{item.time}}</view>
+							<view class="test-item-b">标题：{{item.title}}</view>
+              <checkbox value="{{item.id}}" checked="{{false}}" />
+            </view>
+            </checkbox-group>
+					</scroll-view>
+          <view class="button">
+           <button type="default" bindtap="deletetitle">删除</button>
+            </view>
+				</view>
+
+			</view>
+		</view>

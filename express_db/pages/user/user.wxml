@@ -1,0 +1,9 @@
+
+<view class="apple" >
+  <!-- ToolTip信息提示 -->
+  <form bindsubmit="advertiseTap" report-submit>
+  <button  formType="submit" class="info" >查看公告</button>
+   </form>
+  <button type="default" class="warn" bindtap="voteTap">查看投票</button>
+  
+</view>

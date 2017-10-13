@@ -1,0 +1,25 @@
+/* pages/user/user.wxss */
+
+.apple {
+  margin: 20 rpx;
+  padding-top: 20 rpx;
+}
+
+
+button {
+  font-size: 32rpx;
+  padding: 0 ;
+  margin-top: 200rpx;
+  margin-bottom: 100rpx;
+  width: 40%;
+
+}
+
+.info{
+  background: #36f;
+}
+
+.warn{
+  color: white;
+  background: #FFBE00;
+}
