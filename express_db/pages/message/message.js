@@ -68,22 +68,16 @@ Page({
     setTimeout(function(){wx.hideNavigationBarLoading();that.nextLoad();}, 1000);
     console.log("lower")
   },
-  //scroll: function (e) {
-  //  console.log("scroll")
-  //},
+ 
 
   //网络请求数据, 实现首页刷新
   
 
   //使用本地 fake 数据实现刷新效果
   refresh: function(){
-  //  var feed = util.getData2();
+
     console.log("loaddata");
-  //  var feed_data = feed.data;
-   // this.setData({
-    //  feed:feed_data,
-     // feed_length: feed_data.length
-    //});
+  
   },
 
   //使用本地 fake 数据实现继续加载效果

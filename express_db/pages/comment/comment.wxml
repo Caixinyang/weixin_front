@@ -10,8 +10,8 @@
             </view>
             <view style="padding:30rpx 0px 0px; overflow:hidden; height:110rpx;">
               <view class="aricle-user-wrap">
-                <text class="index-poster-name">V.{{item.author}}</text>
-                <text class="index-poster-kind">9级</text>
+                <text class="index-poster-name">{{item.author}}</text>
+                <text class="index-poster-kind"></text>
                 <view class="index-poster-arrow" catchtap="openArrow" data-user-id="{{item.User.Id}}"></view>
               </view>
               <view style="height:40rpx">
@@ -42,7 +42,7 @@
     </block>
   </scroll-view>
    <!-- 评论 -->
-<view>
+<view class="shuru">
 <form bindsubmit="formSubmit">
     <view class="post-mainbody-wrap" >
         <textarea class="c-fullwidth post-mainbody"  name="text" placeholder="内容..." value="{{text}}" type="textarea" bindblur=" textBlur"/>

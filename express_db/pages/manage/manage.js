@@ -61,6 +61,30 @@ Page({
 
   },
   vote_indexTap: function (e) {
+    wx.setStorage({
+      key: 'formId',
+      data: e.detail.formId,
+    })
+    var that = this;
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        that.setData({
+          openid: res.data
+        })
+      },
+    })
+    wx.request({
+      url: 'https://www.ownersbuild.com/update/formId',
+      data: {
+        formId: e.detail.formId,
+        openid: that.data.openid
+      },
+      method: 'POST',
+      success: function (res) {
+
+      }
+    })
     wx.navigateTo({
       url: '../vote_index/vote_index',
     })

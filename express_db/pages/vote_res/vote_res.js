@@ -57,20 +57,55 @@ Page({
     })
   },
   evaSubmit:function(e){
+
+ 
     //发送投票消息
     //拿到fId
-    var that=this;
+     var that=this;
     var fId = e.detail.formId;
-    console.log("fId");
-    console.log(fId);
-    console.log("access_token:");
-    console.log(that.data.access_token);
+    console.log("fId:"+ fId);
+    
+    console.log("access_key:" + that.data.access_key);
     var optionStr="";
     for(let i=0;i<this.data.optionList.length;i++){
       optionStr += this.data.optionList[i].value + ":" + this.data.optionList[i].num+"票  "
     }
     console.log(optionStr);
     var array = [];
+
+    wx.request({
+      url: 'https://www.ownersbuild.com/share/voteres', //仅为示例，并非真实的接口地址
+      data: {
+        fId: e.detail.formId,
+        keyword1: this.data.voteTitle,
+        keyword2: "管理员",
+        keyword3: optionStr,
+        keyword4: this.data.voteType,
+        access_token: this.data.access_token,
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log("fid发送");
+       
+
+      }
+    });
+    wx.showModal({
+      title: '投票状态',
+      content: '提交成功',
+      success: function (res) {
+        if (res.confirm || res.cancel) {
+          // 点击确定后跳转登录页面并关闭当前页面  
+          wx.redirectTo({
+            url: '../vote_index/vote_index'
+          })
+        }
+      }
+    })
+    /*
     var l = 'https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=' + that.data.access_token;
     //发送通告到每一个已经通过的人身上！！！
     var d = {
@@ -129,19 +164,9 @@ Page({
           })
         };
       }
-    });
-    wx.showModal({
-      title: '投票状态',
-      content: '提交成功',
-      success: function (res) {
-        if (res.confirm || res.cancel) {
-          // 点击确定后跳转登录页面并关闭当前页面  
-          wx.redirectTo({
-            url: '../vote_index/vote_index'
-          })
-        }
-      }
-    })
+    });*/
+   
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

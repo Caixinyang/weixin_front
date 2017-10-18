@@ -44,7 +44,7 @@
             </view>
             <view style="padding:30rpx 0px 0px; overflow:hidden; height:110rpx;">
               <view class="aricle-user-wrap">
-                <text class="index-poster-name">V.{{item.author}}</text>
+                <text class="index-poster-name">{{item.author}}</text>
                 <text class="index-poster-kind">12级</text>
                 <view class="index-poster-arrow" catchtap="openArrow" data-user-id="{{item.User.Id}}"></view>
               </view>

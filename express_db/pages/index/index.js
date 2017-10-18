@@ -19,6 +19,20 @@ Page({
     })
     //判断是否注册过！
     var that=this;
+
+    var manage ="om1sf0dZzSPykCaS4k-R6uRYKdzA";
+    var manage_li = "om1sf0U_cq9d7bvpmFiWLC5srMVg"
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        if (res.data == manage || manage_li == res.data) {
+          wx.redirectTo({
+
+            url: '../manage/manage'
+          })
+        }
+      }
+    });
     //console.log(count);
     //用openid去验证一下是否已经通过！
     //没有这个id就去注册
@@ -52,7 +66,7 @@ Page({
         else 
         {
      wx.navigateTo({
-         url: '../register/register'
+         url: '../register_user/register_user'
             })
         }
       }
@@ -85,10 +99,11 @@ Page({
 
       })
       var manage = "om1sf0dZzSPykCaS4k-R6uRYKdzA";
+      var manage_li = "om1sf0U_cq9d7bvpmFiWLC5srMVg"
       wx.getStorage({
         key: 'openid',
         success: function (res) {
-          if (res.data==manage) {
+          if (res.data == manage || manage_li==res.data) {
             wx.redirectTo({
           
               url: '../manage/manage'

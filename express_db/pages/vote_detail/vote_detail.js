@@ -43,12 +43,20 @@ Page({
     var date = new Date(str);
     var time = date.getTime();
     var that = this;
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        that.setData({
+          openid: res.data
+        })
+      },
+    })
     console.log(app.globalData.openid);
     wx.getStorage({
       key: 'Date',
       success: function (res) {
         if (res.data >= time) {
-          if (app.globalData.openid == "om1sf0U_cq9d7bvpmFiWLC5srMVg") {
+          if (that.data.openid == "om1sf0dZzSPykCaS4k-R6uRYKdzA") {
             wx.showModal({
               title: '投票状态',
               content: '投票已结束，是否公布',

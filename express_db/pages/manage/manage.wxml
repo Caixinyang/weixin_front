@@ -7,6 +7,7 @@ s<view class="apple" >
   <button style="color:#fff;background-color:rgba(181,23,110,1)" type="default" class="warn" bindtap="messageTap">公告栏</button>
   <form bindsubmit="voteTap" report-submit>
   <button formType="submit" style="color:#fff;background-color:rgba(56,23,164,1)" type="default" class="warn" bindtap="voteTap">发起投票</button>
-   </form>
-  <button style="color:#fff;background-color:rgba(181,180,50,1)" type="default" class="warn" bindtap="vote_indexTap">我的投票</button>
+   
+  <button formType="submit" style="color:#fff;background-color:rgba(181,180,50,1)" type="default" class="warn" bindtap="vote_indexTap">我的投票</button>
+</form>
 </view>

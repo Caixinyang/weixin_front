@@ -14,7 +14,7 @@
           <checkbox-group  bindchange="checkboxChange_exam">
 						<view class="test-item" wx:for="{{exam}}" wx:key="{{item.id}}">
 							<view class="test-item-t">姓名：{{item.name}}</view>
-							<view class="test-item-b">住址：{{item.address}} 电话：{{item.phone}}</view>
+							<view class="test-item-b">栋数：{{item.unit}} 楼层：{{item.floor}} 房号：{{item.room_num}} 电话：{{item.phone}}</view>
               <checkbox value="{{item.id}}" checked="{{false}}" />
             </view>
             </checkbox-group>
@@ -30,7 +30,7 @@
           	<checkbox-group  bindchange="checkboxChange_pass">
 						<view class="test-item" wx:for="{{pass}}" wx:key="{{item.id}}">
               <view class="test-item-t">姓名：{{item.name}}</view>
-							<view class="test-item-b">住址：{{item.address}} 电话：{{item.phone}}</view>
+							<view class="test-item-b">栋数：{{item.unit}} 楼层：{{item.floor}} 房号：{{item.room_num}} 电话：{{item.phone}}</view>
 						<checkbox value="{{item.id}}" checked="{{false}}" />
             </view>
              </checkbox-group>
@@ -45,7 +45,7 @@
           <checkbox-group  bindchange="checkboxChange_blacklist">
 						<view class="test-item" wx:for="{{blacklist}}" wx:key="{{item.id}}">
 						<view class="test-item-t">姓名：{{item.name}}</view>
-							<view class="test-item-b">住址：{{item.address}} 电话：{{item.phone}}</view>
+							<view class="test-item-b">栋数：{{item.unit}} 楼层：{{item.floor}} 房号：{{item.room_num}} 电话：{{item.phone}}</view>
 						  <checkbox value="{{item.id}}" checked="{{false}}" />
             </view>
              </checkbox-group>

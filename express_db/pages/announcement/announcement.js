@@ -30,11 +30,6 @@ Page({
       },
       success: function (res) {
         console.log("查询成功");
-        //var array=res.data.split("\n");
-        /*for(var i=0;i<array.length;i++){
-          console.log(array[i]);
-          console.log(JSON.parse(array[0]));
-        }*/
 
         that.setData({
           showData: res.data
@@ -81,7 +76,9 @@ Page({
         "type": Number(this.data.showData[i].power),
         "name": this.data.showData[i].name,
         "phone": this.data.showData[i].PhoneNumber,
-        "address": this.data.showData[i].address
+        "unit": this.data.showData[i].unit,
+        "floor": this.data.showData[i].floor,
+        "room_num": this.data.showData[i].room_num
       })
        ii=ii+1;
       }

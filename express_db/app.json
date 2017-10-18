@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/advertise/advertise",
@@ -13,13 +13,14 @@
     "pages/vote_detail/vote_detail",
     "pages/vote_index/vote_index",
     "pages/user/user",
-    "pages/vote_res/vote_res"
+    "pages/vote_res/vote_res",
+    "pages/register_building/register_building",
+    "pages/register_user/register_user"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
- 
 }
